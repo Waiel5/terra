@@ -1,0 +1,71 @@
+{
+  "name": "@terra-gl/react",
+  "version": "2.4.0",
+  "description": "React geospatial visualization library. Heatmaps, clusters, trajectories, geofences — built on Deck.gl and MapLibre.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
+    "@deck.gl/core": ">=8.8.0",
+    "@deck.gl/layers": ">=8.8.0",
+    "@deck.gl/aggregation-layers": ">=8.8.0",
+    "@deck.gl/react": ">=8.8.0",
+    "maplibre-gl": ">=2.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@deck.gl/core": "^8.9.0",
+    "@deck.gl/layers": "^8.9.0",
+    "@deck.gl/aggregation-layers": "^8.9.0",
+    "@deck.gl/react": "^8.9.0",
+    "maplibre-gl": "^3.1.0",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.0",
+    "vitest": "^0.34.0",
+    "@storybook/react": "^7.4.0",
+    "eslint": "^8.45.0",
+    "supercluster": "^8.0.1",
+    "@types/supercluster": "^7.1.0"
+  },
+  "keywords": [
+    "react",
+    "map",
+    "geospatial",
+    "deck.gl",
+    "maplibre",
+    "heatmap",
+    "clustering",
+    "trajectory",
+    "geofence",
+    "gis",
+    "visualization"
+  ],
+  "author": "waiel <git@waiel.co>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Waiel5/terra"
+  },
+  "homepage": "https://github.com/Waiel5/terra#readme",
+  "bugs": {
+    "url": "https://github.com/Waiel5/terra/issues"
+  }
+}
